@@ -43,16 +43,25 @@ The **Personal Finance Manager** is a web-based system that allows users to effi
    ```bash
    git clone github.com/Ravi9550/FinTrack.git
    ```
+2.  Go to the folder in which your 
 2. **Create a virtual environment**
    ```bash
    python3 -m venv venv
+3. **Activate the virtual environment**
 
-  For Linux/macOS
-  ```bash
-   source venv/bin/activate
-  ```
-  For Windows
+   - For Linux/macOS
+     ```bash
+     source venv/bin/activate
+     ```
+  
+   - For Windows
+     ```bash
+     venv\Scripts\activate
+    ```
+4. ** Go to Porject Folder**
+4. **Install required dependencies**
    ```bash
-   venv\Scripts\activate
-  ```
+   pip install -r requirements.txt
+    
+ 
 

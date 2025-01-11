@@ -39,12 +39,14 @@ The **Personal Finance Manager** is a web-based system that allows users to effi
 
 ## Setup Instructions
 
-1. **Clone the repository:**
+1. **Clone the repository**
    ```bash
-   git clone github.com/Ravi9550/FinTrack.git
+   git clone https://github.com/Ravi9550/FinTrack.git
    ```
-2.  Go to the folder in which your 
-2. **Create a virtual environment**
+2. **Go to the folder**
+   ```bash
+    cd Fintrack
+3. **Create a virtual environment**
    ```bash
    python3 -m venv venv
 3. **Activate the virtual environment**
@@ -58,10 +60,30 @@ The **Personal Finance Manager** is a web-based system that allows users to effi
      ```bash
      venv\Scripts\activate
     ```
-4. ** Go to Porject Folder**
 4. **Install required dependencies**
    ```bash
    pip install -r requirements.txt
+
+5. **Create Django project**
+   ```bash
+   django-admin startproject fintrack
+   ```
+6. **Go to project folder**
+   ```bash
+    cd fintrack
+7. **Create a Django app**
+   ```bash
+   django-admin startapp finanaceapp
+8. **Apply database migrations**
+   ```bash
+   python manage.py migrate
+9. **Create a superuser**(for admin access)
+    ```bash
+    python manage.py createsuperuser
+10. **Run the development server**
+    ```bash
+    python manage.py runserver
+   
     
  
 

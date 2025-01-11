@@ -1,0 +1,63 @@
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/yearly.css' %}">
+
+{% endblock %}
+<div class="container mt-4">
+
+    <div class="text-center mb-4">
+        <h3 class="mb-4 fw-bold text-primary border-bottom pb-2">Yearly Report</h3>
+    </div>
+      <form method="GET" action="{% url 'dashboard' %}" class="year-form">
+        <div class="form-group">
+            <label for="year" class="form-label">Select Year</label>
+            <select name="year" id="year" class="form-control custom-dropdown" required>
+                {% for y in years %}
+                    <option value="{{ y }}" {% if y == selected_year %}selected{% endif %}>
+                        {{ y }}
+                    </option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="btn btn-secondary mt-3">Show Report</button>
+        </div>
+    </form>
+
+   {% if no_data_year %}
+        <div class="alert alert-warning alert-dismissible fade show mt-6 text-center" role="alert">
+        <strong>No Data Available for This Month!</strong>
+        <p class="mb-8">It seems like there are no records for this month. Please check again later or add some expenses and income for the month.</p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    {% else %}
+        
+        <div class="text-center mb-4">
+        <h3 class="text-secondary border-bottom pb-2">Graphs</h3>
+    </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="graph-title">
+                <h4>Expense Distribution</h4>
+            </div>
+                <canvas id="expenseChartYearly" width="400" height="400"
+                         data-categories="{{ categories_year|join:',' }}" 
+                         data-amounts="{{ amounts_year|join:',' }}"
+                         data-expenses="{{ total_expenses_year }}"
+                         data-income="{{ total_income_year }}"
+                         data-savings="{{ total_savings_year }}"></canvas>
+            </div>
+            <div class="col-md-6">
+               
+                <div class="graph-title">
+              <h4>Income, Expenses</h4>
+            </div>
+                
+                <canvas id="incomeExpenseChartYearly" width="400" height="400"></canvas>
+            </div>
+        </div>
+    {% endif %}
+</div>
+
+
+

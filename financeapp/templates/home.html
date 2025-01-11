@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% load static %}
+{% block css %}
+
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+ 
+
+{% block content %}
+<div class="d-flex vh-100 justify-content-center align-items-center">
+    <div class="text-center">
+        <h1 class="display-4 text-gradient fw-bold">Welcome to Personal Finance Manager</h1>
+        <p class="lead mt-3 text-muted">Track your income, expenses, and savings with ease.</p>
+        <button class="btn btn-primary btn-lg mt-4 px-5 shadow interactive-button">
+            Get Started
+        </button>
+    </div>
+</div>
+
+
+{% endblock %}

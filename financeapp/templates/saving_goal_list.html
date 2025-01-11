@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Your Saving Goals{% endblock %}
+{% block content %}
+<div class="container mt-4">
+   
+     <div class="d-flex justify-content-between align-items-center">
+        <h2 class="text-success">Your Saving Goals</h2>
+        <a href="{% url 'add_saving_goal' %}" class="btn btn-primary mt-3">
+            <i class="fas fa-plus-circle"></i> Add New Goal</a>
+    </div>
+    
+    {% if goals %}
+    <table class="table table-striped table-bordered mt-3">
+        <thead>
+            <tr class="text-center font-weight-bold" style="background-color: #ADD8E6; color: #343a40;">
+
+                <th>Goal Name</th>
+                <th>Target Amount</th>
+                <th>Money Progress</th>
+                <th>Time Progress</th>
+                <th>Remaining</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for goal in goals %}
+            <tr  <tr class="text-center">>
+                <td>{{ goal.goal_name }}</td>
+                <td>{{ goal.target_amount }}</td>
+                <td>{{ goal.progress_money |floatformat:2  }}%</td> 
+                <td>{{ goal.progress_time|floatformat:2  }}%</td>  
+                 <td>{{ goal.remaining }}</td>
+                 <td>{{ goal.status }}</td>
+
+              
+               
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+   {% else %}
+  <div
+    class="d-flex flex-column align-items-center justify-content-center text-center bg-light p-4 border border-dashed rounded"
+  >
+    <i
+      class="fas fa-wallet mb-3"
+      style="font-size: 3rem; color:color: #007BFF;"
+    ></i>
+    <h2 class="text-secondary">No Saving Goal Added Yet</h2>
+    <p class="text-muted">
+      Start tracking Goal Progress
+    </p>
+    <a href="{% url 'add_saving_goal' %}" class="btn btn-primary mt-3"
+      >Add New Goal</a
+    >
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

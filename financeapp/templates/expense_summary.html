@@ -1,0 +1,25 @@
+
+{% block title %}Expense Summary{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Expense Summary</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr class="text-center font-weight-bold" style="background-color: #ADD8E6; color: #343a40;">
+
+                <th>Category</th>
+                <th>Total Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for category, total in summary.items %}
+            <tr>
+                <td>{{ category }}</td>
+                <td>${{ total }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

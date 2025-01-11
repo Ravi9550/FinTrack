@@ -1,0 +1,19 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Delete Expense{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Delete Expense</h2>
+    <p>Are you sure you want to delete the following expense?</p>
+    <p>Title: {{ expense.title }}</p>
+    <p>Amount: ${{ expense.amount }}</p>
+    <p>Category: {{ expense.category }}</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a href="{% url 'dashboard' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}

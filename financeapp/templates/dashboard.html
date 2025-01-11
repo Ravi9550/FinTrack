@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Dashboard{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Welcome, {{ user.username }}</h2>
+    <p>This is your dashboard. Manage your finances here!</p>
+
+<div class="button-container mt-4">
+    <a href="{% url 'view_transaction' %}" class="btn btn-lg btn-custom">Transaction List</a>
+    <a href="{% url 'category_list' %}" class="btn btn-lg btn-custom">Category List</a>
+    <a href="{% url 'transaction_summary' %}" class="btn btn-lg btn-custom">Transaction Summary</a>
+    <a href="{% url 'income_list' %}" class="btn btn-lg btn-custom">Income List</a>
+    <a href="{% url 'saving_goal_list' %}" class="btn btn-lg btn-custom">Goal List</a>
+</div>
+
+     <div class="mt-5">
+        <div class="row">
+
+     {% include 'monthly_report.html' %}
+        </div>
+    </div>
+
+     <div class="mt-5">
+        <div class="row">
+
+     {% include 'yearly_report.html' %}
+        </div>
+    </div>
+    
+
+    
+</div>
+{% endblock %}
+   
+
+  
+ {% block scripts %}
+
+<script src="{% static 'js/yearly_chart.js' %}" async></script>
+<script src="{% static 'js/monthly_chart.js' %}"async></script>
+
+
+{% endblock %}

@@ -1,0 +1,27 @@
+ .interactive-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .interactive-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .total-amount {
+        font-size: 24px;
+        font-weight: bold;
+        color: #343a40;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .total-amount:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    .bg-teal {
+        background-color: #1E4B4F; 
+    }

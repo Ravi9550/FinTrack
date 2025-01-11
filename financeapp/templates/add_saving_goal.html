@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Your Goals{% endblock %}
+{% block content %}
+    <h2>Add Savings Goal</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Create Goal</button>
+    </form>
+   
+
+{% endblock %}

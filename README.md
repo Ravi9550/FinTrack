@@ -59,7 +59,6 @@ The **Personal Finance Manager** is a web-based system that allows users to effi
    - For Windows
      ```bash
      venv\Scripts\activate
-    ```
 4. **Install required dependencies**
    ```bash
    pip install -r requirements.txt

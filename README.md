@@ -37,6 +37,17 @@ The **Personal Finance Manager** is a web-based system that allows users to effi
 - **Visualization:** Chart.js
 
 
+## Screenshots
+![home1](https://github.com/user-attachments/assets/6eb612e7-2d4f-4b70-87b9-7865681babdf)
+![dash1](https://github.com/user-attachments/assets/002be1f3-d07a-4cc7-a45e-02bca6df99ba)
+![dash2](https://github.com/user-attachments/assets/ae0c7d43-2834-4292-8120-44a87fec1811)
+![dash3](https://github.com/user-attachments/assets/7e9dffc6-aa03-4474-87c4-68f220e2ff2b)
+![dash4](https://github.com/user-attachments/assets/db233136-e85e-4f0d-a606-0cae07a5c177)
+![trans](https://github.com/user-attachments/assets/9572a18d-35e2-41e2-9fd7-e2c65e0d5dab)
+![tans_summ](https://github.com/user-attachments/assets/2ba06810-ded2-49c1-8789-48caefb1b485)
+
+
+
 ## Setup Instructions
 
 1. **Clone the repository**
@@ -81,7 +92,3 @@ The **Personal Finance Manager** is a web-based system that allows users to effi
 10. **Run the development server**
     ```bash
     python manage.py runserver
-   
-    
- 
-

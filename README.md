@@ -42,4 +42,17 @@ The **Personal Finance Manager** is a web-based system that allows users to effi
 1. **Clone the repository:**
    ```bash
    git clone github.com/Ravi9550/FinTrack.git
-   cd personal-finance-manager
+   ```
+2. **Create a virtual environment**
+   ```bash
+   python3 -m venv venv
+
+  For Linux/macOS
+  ```bash
+   source venv/bin/activate
+  ```
+  For Windows
+   ```bash
+   venv\Scripts\activate
+  ```
+

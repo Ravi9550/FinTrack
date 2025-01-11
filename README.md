@@ -92,3 +92,46 @@ The **Personal Finance Manager** is a web-based system that allows users to effi
 10. **Run the development server**
     ```bash
     python manage.py runserver
+## Running the Tests
+
+1. **To run the tests:**
+
+    In your terminal, make sure you are in the project directory, and run the following command:
+
+    ```bash
+    python manage.py test
+    ```
+
+    Django will automatically discover any test cases in your app and run them.
+
+2. **Test Output:**
+
+    The results will show which tests passed and which failed. Here's an example of what to expect:
+
+    ```
+   Found 6 test(s).
+    Creating test database for alias 'default'...
+    System check identified no issues (0 silenced).
+    ......
+    ----------------------------------------------------------------------
+    Ran 6 tests in 1.639s
+    
+    OK
+    Destroying test database for alias 'default'...
+    ```
+
+    This indicates that all tests have passed.
+
+## Sample Test Cases
+
+The following tests have been included in the app:
+
+1. **test_transaction_creation**: Verifies that transactions are created correctly.
+2. **test_transaction_str_method**: Verifies the string representation of a transaction.
+3. **test_income_creation**: Verifies that incomes are created correctly.
+4. **test_income_str_method** : Verifies the string representation of a income
+5. **test_savings_goal_creation**:Verifies that savings goal is created correctly.
+6. **test_savings_goal_str_method** : Verifies the string representation of savings goals.
+
+5. **test_savings_goal_creation**: Verifies that savings goals are created correctly.
+6. **test_transaction_str_method**: Verifies the string representation of a transaction.

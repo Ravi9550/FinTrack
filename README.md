@@ -63,7 +63,6 @@ The **Personal Finance Manager** is a web-based system that allows users to effi
 4. **Install required dependencies**
    ```bash
    pip install -r requirements.txt
-
 5. **Create Django project**
    ```bash
    django-admin startproject fintrack

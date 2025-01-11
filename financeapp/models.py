@@ -17,7 +17,8 @@ class Transaction(models.Model):
     item = models.CharField(max_length=255, blank=True, null=True)
 
     def __str__(self):
-        return f"{self.category} - {self.amount} on {self.date}"
+        amount = f"{self.amount:.2f}"
+        return f"{self.category} - {amount} on {self.date}"
 
 class Income(models.Model):
    
@@ -26,7 +27,8 @@ class Income(models.Model):
     date = models.DateField() 
    
     def __str__(self):
-        return f"{self.salary} on {self.date}"
+        salary = f"{self.salary:.2f}"
+        return f"{salary} on {self.date}"
 
     
 class SavingsGoal(models.Model):
@@ -37,4 +39,5 @@ class SavingsGoal(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)  
 
     def __str__(self):
-        return f"{self.goal_name} - {self.target_amount}"
+        target_amount = f"{self.target_amount:.2f}"
+        return f"{self.goal_name} - {target_amount}"
